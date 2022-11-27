@@ -10,9 +10,9 @@ public class Player : MonoBehaviour
 
     public new Rigidbody2D rigidbody2D;
     public Animator animator;
-
     Vector2 movement;
     // Update is called once per frame
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -21,10 +21,12 @@ public class Player : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+           
     }
 
     void FixedUpdate()
     {
         rigidbody2D.MovePosition(rigidbody2D.position + movement * speed * Time.fixedDeltaTime);
     }
+
 }
