@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1399,7 +1399,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      warehouse_56: -519190983
       warehouse_51: -575227284
       warehouse_37: -2067011743
       warehouse_53: 1561601762
@@ -1454,6 +1453,7 @@ TextureImporter:
       warehouse_2: 1302492995
       warehouse_24: -208286230
       warehouse_25: 1103974255
+      warehouse_56: -519190983
       warehouse_38: 149748675
       warehouse_22: -1291542186
       warehouse_0: 2100536154
