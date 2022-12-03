@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 4
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -24614,13 +24614,13 @@ TextureImporter:
       1_Generic_32x32_352: 1533779961
       1_Generic_32x32_802: -157628284
       1_Generic_32x32_336: 1405378752
-      1_Generic_32x32_339: 1688575335
+      1_Generic_32x32_634: 407326320
       1_Generic_32x32_18: 816699610
       1_Generic_32x32_997: -747472885
       1_Generic_32x32_499: -469410256
       1_Generic_32x32_922: -856948786
       1_Generic_32x32_638: -209769527
-      1_Generic_32x32_634: 407326320
+      1_Generic_32x32_339: 1688575335
       1_Generic_32x32_1141: -167326284
       1_Generic_32x32_156: 268364256
       1_Generic_32x32_496: 931601884
