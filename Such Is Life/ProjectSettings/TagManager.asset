@@ -7,6 +7,8 @@ TagManager:
   - Warehouse
   - PCHouse
   - PCHouseDoor
+  - wareHouseDoor
+  - PcDoor
   layers:
   - Default
   - TransparentFX

@@ -33,5 +33,13 @@ public class DoorControl : MonoBehaviour
         {
             SceneManager.LoadScene("PCHouse");
         }
+        else if (building.CompareTag("wareHouseDoor"))
+        {
+            SceneManager.LoadScene("Map 3");
+        }
+        else if (building.CompareTag("PcDoor"))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }
