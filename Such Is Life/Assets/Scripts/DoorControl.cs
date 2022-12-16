@@ -1,45 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DoorControl : MonoBehaviour
 {
-    public Collider2D collider1;
-    public GameObject building;
+    public bool enter;
+    public string Scene;
 
     void Update()
     { 
-        OnTriggerStay2D(collider1);
+       if(enter && Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene(Scene);
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D player)
+    private void OnTriggerEnter2D(Collider2D door)
     {
-        if (player.CompareTag("Player"))
+        if (door.GetComponent<PcHouseDoor>())
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                openDoor();
-            }
+            Scene = "PCHouse";
+            enter = true;
+        }
+        else if (door.GetComponent<PcDoor>())
+        {
+            Scene = "SampleScene";
+            enter = true;
+        }
+        else if (door.GetComponent<wareDoor>())
+        {
+            Scene = "Warehouse";
+            enter = true;
+        }
+        else if (door.GetComponent<wareHouseDoor>())
+        {
+            Scene = "Map 3";
+            enter = true;
         }
     }
-    void openDoor()
+
+    private void OnTriggerExit2D(Collider2D door)
     {
-        if (building.CompareTag("Warehouse"))
+        if(door.GetComponent<PcHouseDoor>() || door.GetComponent<wareHouseDoor>() || door.GetComponent<PcDoor>() ||
+           door.GetComponent<wareDoor>())
         {
-            SceneManager.LoadScene("Warehouse");
-        }
-        else if (building.CompareTag("PCHouse"))
-        {
-            SceneManager.LoadScene("PCHouse");
-        }
-        else if (building.CompareTag("wareHouseDoor"))
-        {
-            SceneManager.LoadScene("Map 3");
-        }
-        else if (building.CompareTag("PcDoor"))
-        {
-            SceneManager.LoadScene("SampleScene");
+            enter = false;
         }
     }
 }
