@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Menu.unity
+    guid: fd2718afedae3694a82bd326885c0c3c
+  - enabled: 1
+    path: Assets/Scenes/How To Play.unity
+    guid: 281593c64ed6f8c4cb2d632b22fe78c9
+  - enabled: 1
+    path: Assets/Scenes/Map 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PCHouse.unity
+    guid: 3a03b86be36a5ae4688590554473de7a
   - enabled: 1
     path: Assets/Scenes/Interior 1.unity
     guid: 81b14c26f5d0acc40821dc13be76db8e
@@ -20,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Warehouse.unity
     guid: e8def2492a7418c489923d21dab63ffd
-  - enabled: 1
-    path: Assets/Scenes/PCHouse.unity
-    guid: 3a03b86be36a5ae4688590554473de7a
   m_configObjects: {}

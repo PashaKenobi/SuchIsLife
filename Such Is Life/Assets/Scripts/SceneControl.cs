@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DoorControl : MonoBehaviour
+public class SceneControl : MonoBehaviour
 {
     public bool enter;
     public string Scene;
 
     void Update()
-    { 
-       if(enter && Input.GetKeyDown(KeyCode.E))
+    {
+        if (enter)
         {
             SceneManager.LoadScene(Scene);
         }
@@ -19,32 +18,33 @@ public class DoorControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D door)
     {
-        if (door.GetComponent<PcHouseDoor>())
+        if (door.GetComponent<RoadToHospitalWest>())
         {
-            Scene = "PCHouse";
+            Scene = "Map 2";
             enter = true;
         }
-        else if (door.GetComponent<PcDoor>())
+        else if (door.GetComponent<RoadToHospitalEast>())
         {
-            Scene = "Map 1";
+            Scene = "Map 2";
             enter = true;
         }
-        else if (door.GetComponent<wareDoor>())
-        {
-            Scene = "Warehouse";
-            enter = true;
-        }
-        else if (door.GetComponent<wareHouseDoor>())
+        else if (door.GetComponent<RoadToWarehouse>())
         {
             Scene = "Map 3";
             enter = true;
         }
+        else if (door.GetComponent<RoadToHome>())
+        {
+            Scene = "Map 1";
+            enter = true;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D door)
     {
-        if(door.GetComponent<PcHouseDoor>() || door.GetComponent<wareHouseDoor>() || door.GetComponent<PcDoor>() ||
-           door.GetComponent<wareDoor>())
+        if (door.GetComponent<RoadToHospitalWest>() || door.GetComponent<RoadToHospitalEast>() ||
+            door.GetComponent<RoadToWarehouse>() || door.GetComponent<RoadToHome>()) 
         {
             enter = false;
         }
