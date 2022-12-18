@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public float delay;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public Image speakerPortraitEmpty;
     public GameObject dialogueBox;
 
     private Queue<string> sentences;
@@ -28,6 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue (Dialogue dialogue){
         nameText.text = dialogue.speakerName;
+        speakerPortraitEmpty.sprite = dialogue.speakerPortrait;
 
         sentences.Clear();
 
@@ -58,7 +60,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void EndDialogue(){
+    public void EndDialogue(){
         setPanelVisibility(false);
         Debug.Log("End of conversation.");
     }
