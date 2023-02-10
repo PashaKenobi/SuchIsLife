@@ -15,18 +15,20 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-    // Start is called before the first frame update
+    // Awake is called before the scene starts, we initialize the Queue that will store our sentences.
     private void Awake()
     {
         sentences = new Queue<string>();
     }
 
+    // This is called every second, helps us further the dialogue whenever we press spacebar or a button
     public void Update(){
         if(Input.GetKeyDown(KeyCode.Space) && dialogueBox.activeSelf){
             DisplayNextSentence();
         }
     }
 
+    //Puts the dialogue sentences in a queue to store them
     public void StartDialogue (Dialogue dialogue){
         nameText.text = dialogue.speakerName;
         speakerPortraitEmpty.sprite = dialogue.speakerPortrait;
@@ -40,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    // Key feature, furthers the dialogue
     public void DisplayNextSentence ()
     {
         if (sentences.Count == 0){
@@ -49,9 +52,10 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(sentence)); //Uses asynchronous programming to type the sentence letter by letter.
     }
 
+    //Like stated above, types the sentences letter by letter.
     IEnumerator TypeSentence(string sentence){
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()){
@@ -60,11 +64,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    //Ends the dialogue and renders the dialogue box invisible for the time being.
     public void EndDialogue(){
         setPanelVisibility(false);
         Debug.Log("End of conversation.");
     }
 
+    //The function used to make the dialogue box disappear.
     public void setPanelVisibility(bool panelStatus){
         if (dialogueBox != null) {
             dialogueBox.SetActive(panelStatus);  
