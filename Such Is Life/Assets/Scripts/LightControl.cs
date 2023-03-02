@@ -97,6 +97,10 @@ public class LightControl : MonoBehaviour
                 lights[i].SetActive(false);//turn the lights off
             }
         }
+        if (hours >22  && hours < 6 && volume.weight!=1)
+        {
+            volume.weight = 1;
+        }
 
         if (hours >=6 && hours < 7) // dawn to 6:00 to 7:00 (changeable)
         {

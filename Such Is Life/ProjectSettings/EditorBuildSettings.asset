@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Warehouse.unity
     guid: e8def2492a7418c489923d21dab63ffd
+  - enabled: 1
+    path: Assets/Scenes/CaravanPark.unity
+    guid: b72a1f7788533eb44bcb97ed7b984135
   m_configObjects: {}
