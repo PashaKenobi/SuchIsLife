@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HungerHealthSc : MonoBehaviour
+public class ThirstSc : MonoBehaviour
 {
 
     public Slider slider;
     public Gradient gradient;
 
+
     // Start is called before the first frame update
-    public void SetMaxHealth(int health)
+    public void SetMaxThirst(int thirst)
     {
-        slider.maxValue = health;
-        slider.value = health;
+        slider.maxValue = thirst;
+        slider.value = thirst;
 
 
     }
-    public void SetHealth(int health)
+    public void SetThirst(int thirst)
     {
-        
-        slider.value = health;
+
+        slider.value = thirst;
     }
 }
