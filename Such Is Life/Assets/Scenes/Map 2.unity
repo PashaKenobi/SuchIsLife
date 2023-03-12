@@ -29125,6 +29125,7 @@ GameObject:
   - component: {fileID: 574134552}
   - component: {fileID: 574134554}
   - component: {fileID: 574134555}
+  - component: {fileID: 574134556}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -29415,6 +29416,22 @@ MonoBehaviour:
   healthBar: {fileID: 2054491462}
   ThirstBar: {fileID: 1955331690}
   HungerBar: {fileID: 411060783}
+--- !u!114 &574134556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574134545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe0481a8e73d8149b10c2608c6d4c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &597097593
 GameObject:
   m_ObjectHideFlags: 0
@@ -29768,7 +29785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687345034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -232.3, y: 57.6, z: 1.8311046}
+  m_LocalPosition: {x: -232, y: 57.6, z: 1.8311046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45219,7 +45236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1810357594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46207,7 +46224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942812141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 270.7, y: -27.1, z: 1.8311046}
+  m_LocalPosition: {x: 269, y: -27.1, z: 1.8311046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

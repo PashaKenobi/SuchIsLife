@@ -764,7 +764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 366.5, y: 175}
+  m_AnchoredPosition: {x: 370, y: 243}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686182712
@@ -1380,7 +1380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297.4, y: 175}
+  m_AnchoredPosition: {x: -296, y: 248}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988219536
@@ -1646,6 +1646,7 @@ GameObject:
   - component: {fileID: 1210061116}
   - component: {fileID: 1210061125}
   - component: {fileID: 1210061126}
+  - component: {fileID: 1210061127}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1950,6 +1951,22 @@ MonoBehaviour:
   healthBar: {fileID: 1864786186}
   ThirstBar: {fileID: 1430648635}
   HungerBar: {fileID: 648612376}
+--- !u!114 &1210061127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210061115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe0481a8e73d8149b10c2608c6d4c22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1210099132
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class SceneControl : MonoBehaviour
 {
     public bool enter;
     public string Scene;
+    private Vector3 check;
 
     void Update()
     {
