@@ -7,6 +7,7 @@ public class SceneControl : MonoBehaviour
 {
     public bool enter;
     public string Scene;
+    private Vector3 check;
 
     void Update()
     {
@@ -38,13 +39,18 @@ public class SceneControl : MonoBehaviour
             Scene = "Map 1";
             enter = true;
         }
+        else if (door.GetComponent<RoadtoPark>())
+        {
+            Scene = "CaravanPark";
+            enter = true;
+        }
 
     }
 
     private void OnTriggerExit2D(Collider2D door)
     {
         if (door.GetComponent<RoadToHospitalWest>() || door.GetComponent<RoadToHospitalEast>() ||
-            door.GetComponent<RoadToWarehouse>() || door.GetComponent<RoadToHome>()) 
+            door.GetComponent<RoadToWarehouse>() || door.GetComponent<RoadToHome>() || door.GetComponent<RoadtoPark>()) 
         {
             enter = false;
         }
