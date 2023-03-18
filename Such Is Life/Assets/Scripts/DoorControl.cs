@@ -39,12 +39,27 @@ public class DoorControl : MonoBehaviour
             Scene = "Map 3";
             enter = true;
         }
+        else if (door.GetComponent<RoadtoNPC>())
+        {
+            Scene = "WDownLeft";
+            enter = true;
+        }
+        else if (door.GetComponent<RoadtoNPC2>())
+        {
+            Scene = "WDownRight";
+            enter = true;
+        }
+        else if (door.GetComponent<RoadtoNPC3>())
+        {
+            Scene = "WUpRight";
+            enter = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D door)
     {
         if(door.GetComponent<PcHouseDoor>() || door.GetComponent<wareHouseDoor>() || door.GetComponent<PcDoor>() ||
-           door.GetComponent<wareDoor>())
+           door.GetComponent<wareDoor>() || door.GetComponent<RoadtoNPC>() || door.GetComponent<RoadtoNPC2>() || door.GetComponent<RoadtoNPC3>())
         {
             enter = false;
         }
