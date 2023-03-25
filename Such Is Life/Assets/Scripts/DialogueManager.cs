@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Image speakerPortraitEmpty;
     public GameObject dialogueBox;
+    public bool visibleOnInit;
 
     private Queue<string> sentences;
 
@@ -19,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         sentences = new Queue<string>();
+        setPanelVisibility(visibleOnInit);
     }
 
     // This is called every second, helps us further the dialogue whenever we press spacebar or a button
@@ -75,5 +77,9 @@ public class DialogueManager : MonoBehaviour
         if (dialogueBox != null) {
             dialogueBox.SetActive(panelStatus);  
         }  
+    }
+
+    public void setPanelVisible(){
+        dialogueBox.SetActive(true);
     }
 }
