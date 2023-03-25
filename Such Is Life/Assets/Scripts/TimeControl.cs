@@ -24,7 +24,7 @@ public class TimeControl : MonoBehaviour
     }
     void Start()
     {
-        tickRate = 1000;
+        tickRate = 500;
         activate = true;
     }
     private void FixedUpdate()
