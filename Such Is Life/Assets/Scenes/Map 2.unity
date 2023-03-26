@@ -37289,7 +37289,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1116696610}
   speakerPortraitEmpty: {fileID: 318926806}
   dialogueBox: {fileID: 963735567}
-  visibleOnInit: 0
+  visibleOnInit: 1
 --- !u!114 &1294956602
 MonoBehaviour:
   m_ObjectHideFlags: 0
