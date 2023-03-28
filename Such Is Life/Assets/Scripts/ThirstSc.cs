@@ -21,6 +21,8 @@ public class ThirstSc : MonoBehaviour
     public void SetThirst(int thirst)
     {
 
+        print("slider h" + thirst);
+
         slider.value = thirst;
     }
 }

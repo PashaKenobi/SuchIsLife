@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
@@ -15,61 +16,95 @@ public class TakeDamage : MonoBehaviour
     public HealthSc healthBar;
     public ThirstSc ThirstBar;
     public HungerSc HungerBar;
+
+    
     // Start is called before the first frame update
     void Start()
     {
+        StateMng statemng = new StateMng();
+
         currentHunger = maxHunger;
         currentThirst = maxThirst;
         currentHealth = maxHealth;
-        healthBar.SetHealth(maxHealth);
-        HungerBar.SetHunger(maxHunger);
-        ThirstBar.SetThirst(maxThirst);
      
-    }
 
-    // Update is called once per frame
-    void Damage(int damage)
-    {
+        currentThirst = (int)PlayerPrefs.GetFloat("save", currentThirst);
+        currentHunger = (int)PlayerPrefs.GetFloat("save1", currentHunger);
+        currentHealth = (int)PlayerPrefs.GetFloat("save2", currentHealth);
 
-        
-        currentHunger -= damage;
-        currentThirst -= damage;
+
 
         healthBar.SetHealth(currentHealth);
         HungerBar.SetHunger(currentHunger);
         ThirstBar.SetThirst(currentThirst);
-        if(currentHunger == 0 || currentThirst == 0)
+
+
+
+
+    }
+   
+
+    public void PlayerDied()
+    {
+        LevelManager.instance.GameOver();
+        gameObject.SetActive(false);
+    }
+    void Damage(int damage)
+    {
+
+  
+        if (currentHunger == 0 || currentThirst == 0 || currentHealth < 100)
         {
+
             currentHealth -= damage;
-        }    
+        }
+        if(currentHealth == 0)
+        {
+            PlayerDied();
+        }
+
+        currentHunger -= damage;
+        currentThirst -= damage;
+
+    
+
+        if (currentThirst <= 0 && currentHunger <= 0)
+        {
+            currentThirst = 0;
+            currentHunger = 0;
+
+        }
+
+        healthBar.SetHealth(currentHealth);
+        HungerBar.SetHunger(currentHunger);
+        ThirstBar.SetThirst(currentThirst);
+     
+
+
+
 
     }
     void Update()
     {
         timer += Time.deltaTime;
-        print(timer);
-    
+        
         if(timer > 10)
         {
-            Damage(10);
+            Damage(50);
             timer = 0;
-            SaveHealth();
-            SaveThirst();
-            SaveHunger();
+      
+            PlayerPrefs.SetFloat("save", currentThirst);
+            PlayerPrefs.SetFloat("save1", currentHunger);
+            PlayerPrefs.SetFloat("save2", currentHealth);
+
         }
+
+
+
     }
 
-    void SaveHealth()
-    {
-        PlayerPrefs.SetInt("healthP", currentHealth);
-    }
-    void SaveThirst()
-    {
-        PlayerPrefs.SetInt("thirsthP", currentThirst);
-    }
-    void SaveHunger()
-    {
-        PlayerPrefs.SetInt("hungerhP", currentHunger);
-    }
+  
+
+
 
 }

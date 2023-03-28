@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class HealthSc : MonoBehaviour
 {
-
     public Slider slider;
     public Gradient gradient;
 
@@ -20,7 +19,10 @@ public class HealthSc : MonoBehaviour
     }
     public void SetHealth(int health)
     {
-        
+
         slider.value = health;
+
+
+
     }
 }
