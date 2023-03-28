@@ -29812,9 +29812,9 @@ MonoBehaviour:
   maxHealth: 100
   maxHunger: 100
   maxThirst: 100
-  currentHealth: 50
-  currentThirst: 0
-  currentHunger: 0
+  currentHealth: 100
+  currentThirst: 100
+  currentHunger: 100
   healthBar: {fileID: 2054491462}
   ThirstBar: {fileID: 1955331690}
   HungerBar: {fileID: 411060783}
@@ -49394,7 +49394,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 22
   m_TargetDisplay: 0
 --- !u!224 &1696848449
 RectTransform:
