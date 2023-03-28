@@ -57,6 +57,14 @@ public class TakeDamage : MonoBehaviour
         {
             currentHealth = 0;
         }
+        if (currentHealth >= 100)
+        {
+            currentHealth = 100;
+        }
+        if (currentHunger >= 100)
+        {
+            currentHunger = 100;
+        }
         if (currentHunger == 0 && currentThirst == 0)
         {
             currentHealth -= damage;
@@ -89,15 +97,13 @@ public class TakeDamage : MonoBehaviour
     {
         timer += Time.deltaTime;
         
-        if(timer > 10)
+        if(timer > 5)
         {
-            Damage(50);
+            Damage(5);
             timer = 0;
-      
             PlayerPrefs.SetFloat("save", currentThirst);
             PlayerPrefs.SetFloat("save1", currentHunger);
             PlayerPrefs.SetFloat("save2", currentHealth);
-
         }
 
 
