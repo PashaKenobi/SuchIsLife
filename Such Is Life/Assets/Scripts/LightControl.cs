@@ -31,7 +31,7 @@ public class LightControl : MonoBehaviour
     }
     void Start()
     {
-        tickRate = 1000;
+        tickRate = 500;
         volume = gameObject.GetComponent<Volume>();
     }
     private void FixedUpdate()

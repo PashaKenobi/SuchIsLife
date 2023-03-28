@@ -7,10 +7,11 @@ public class SceneControl : MonoBehaviour
 {
     public bool enter;
     public string Scene;
+    private Vector3 check;
 
     void Update()
     {
-        if (enter)
+        if (enter && Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene(Scene);
         }
@@ -43,7 +44,6 @@ public class SceneControl : MonoBehaviour
             Scene = "CaravanPark";
             enter = true;
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D door)
