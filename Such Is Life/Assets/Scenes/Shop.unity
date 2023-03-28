@@ -5742,7 +5742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 218716500}
   - component: {fileID: 218716499}
-  - component: {fileID: 218716498}
+  - component: {fileID: 218716501}
   m_Layer: 0
   m_Name: wareHouseDoor
   m_TagString: wareHouseDoor
@@ -5750,18 +5750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &218716498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218716497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e92837d86393214f95bbd145ae09217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &218716499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5803,6 +5791,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &218716501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218716497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce80814b3c053ee4ba62e93a16b8377f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &220542301
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,6 +10018,7 @@ GameObject:
   - component: {fileID: 933010116}
   - component: {fileID: 933010115}
   - component: {fileID: 933010114}
+  - component: {fileID: 933010122}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -10287,6 +10288,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &933010122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933010112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf7579738cb3a24bb54415aa43adcef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enter: 0
+  Scene: 
 --- !u!1 &987403485
 GameObject:
   m_ObjectHideFlags: 0
@@ -17232,7 +17247,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -29453,6 +29453,7 @@ GameObject:
   - component: {fileID: 574134554}
   - component: {fileID: 574134555}
   - component: {fileID: 574134556}
+  - component: {fileID: 574134557}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -29759,6 +29760,20 @@ MonoBehaviour:
   y: 0
   z: 0
   LoadPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &574134557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574134545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b105a2a034fe145b3a4fc37809cb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enter: 0
+  Scene: 
 --- !u!1 &597097593
 GameObject:
   m_ObjectHideFlags: 0
@@ -49517,26 +49532,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1810357596}
   - component: {fileID: 1810357595}
-  - component: {fileID: 1810357594}
+  - component: {fileID: 1810357597}
   m_Layer: 0
   m_Name: Road1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1810357594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810357593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232f93f4cb629ab4ab5bd952fc3b821d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 1
 --- !u!61 &1810357595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49550,7 +49553,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1764145, y: 21.307146}
+  m_Offset: {x: 32.250984, y: 13.398706}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -49561,7 +49564,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.352829, y: 46.14813}
+  m_Size: {x: 65.50197, y: 30.33125}
   m_EdgeRadius: 0
 --- !u!4 &1810357596
 Transform:
@@ -49571,13 +49574,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810357593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 270.7, y: -229.4, z: 1.8311046}
+  m_LocalPosition: {x: 192.1, y: -119.6, z: 1.8311046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1810357597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810357593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c684d59b94e8da4a816130c2a65cbb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1862369797
 GameObject:
   m_ObjectHideFlags: 0
