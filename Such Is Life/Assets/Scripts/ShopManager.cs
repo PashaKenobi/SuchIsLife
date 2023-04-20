@@ -54,6 +54,5 @@ public class ShopManager : MonoBehaviour
         coinInt = currentCoin - amount;
         coinText.text = coinInt.ToString();
         PlayerPrefs.SetInt("money", coinInt);
-
     }
 }

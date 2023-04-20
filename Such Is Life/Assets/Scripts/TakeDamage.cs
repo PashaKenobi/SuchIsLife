@@ -40,6 +40,7 @@ public class TakeDamage : MonoBehaviour
         LevelManager.instance.GameOver();
         gameObject.SetActive(false);
     }
+
     void Damage(int damage)
     {
         currentHunger -= damage;
@@ -81,18 +82,49 @@ public class TakeDamage : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         HungerBar.SetHunger(currentHunger);
         ThirstBar.SetThirst(currentThirst);
-     
-
-
 
 
     }
+
+    public void addHealth(int heal)
+    {
+        currentHealth += heal;
+        healthBar.SetHealth(currentHealth);
+        PlayerPrefs.SetFloat("save2", currentHealth);
+    }
+
     public void addHunger(int nut)
     {
         currentHunger += nut;
         HungerBar.SetHunger(currentHunger);
         PlayerPrefs.SetFloat("save1", currentHunger);
     }
+
+    public void addEnergy(int eng)
+    {
+        currentThirst += eng;
+        ThirstBar.SetThirst(currentThirst);
+        PlayerPrefs.SetFloat("save", currentThirst);
+    }
+
+    public void setFullHealth(){
+        currentHealth = maxHealth;
+        healthBar.SetHealth(currentHealth);
+        PlayerPrefs.SetFloat("save2", currentHealth);
+    }
+
+    public void setFullHunger(){
+        currentHunger = maxHunger;
+        HungerBar.SetHunger(currentHunger);
+        PlayerPrefs.SetFloat("save1", currentHunger);
+    }
+
+    public void setFullEnergy(){
+        currentThirst = maxThirst;
+        ThirstBar.SetThirst(currentThirst);
+        PlayerPrefs.SetFloat("save", currentThirst);
+    }
+
     void Update()
     {
         timer += Time.deltaTime;
