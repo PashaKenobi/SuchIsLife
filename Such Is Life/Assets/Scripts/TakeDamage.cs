@@ -66,7 +66,7 @@ public class TakeDamage : MonoBehaviour
         {
             currentHunger = 100;
         }
-        if (currentHunger == 0 && currentThirst == 0)
+        if (currentHunger == 0 && currentThirst == 0 && currentHealth != 0)
         {
             currentHealth -= damage;
         }
