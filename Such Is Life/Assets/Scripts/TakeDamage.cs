@@ -21,13 +21,14 @@ public class TakeDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerData playerData = SaveSystem.LoadPlayer();
         currentHunger = maxHunger;
         currentThirst = maxThirst;
         currentHealth = maxHealth;
 
-        currentThirst = (int)PlayerPrefs.GetFloat("save", currentThirst);
-        currentHunger = (int)PlayerPrefs.GetFloat("save1", currentHunger);
-        currentHealth = (int)PlayerPrefs.GetFloat("save2", currentHealth);
+        currentThirst = playerData.energy;
+        currentHunger = playerData.hunger;
+        currentHealth = playerData.health;
 
         healthBar.SetHealth(currentHealth);
         HungerBar.SetHunger(currentHunger);
@@ -82,6 +83,10 @@ public class TakeDamage : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         HungerBar.SetHunger(currentHunger);
         ThirstBar.SetThirst(currentThirst);
+        PlayerPrefs.SetInt("save", currentHealth);
+        PlayerPrefs.SetInt("save1", currentHunger);
+        PlayerPrefs.SetInt("save2", currentThirst);
+
 
 
     }
@@ -90,39 +95,39 @@ public class TakeDamage : MonoBehaviour
     {
         currentHealth += heal;
         healthBar.SetHealth(currentHealth);
-        PlayerPrefs.SetFloat("save2", currentHealth);
+        PlayerPrefs.SetInt("save", currentHealth);
     }
 
     public void addHunger(int nut)
     {
         currentHunger += nut;
         HungerBar.SetHunger(currentHunger);
-        PlayerPrefs.SetFloat("save1", currentHunger);
+        PlayerPrefs.SetInt("save1", currentHunger);
     }
 
     public void addEnergy(int eng)
     {
         currentThirst += eng;
         ThirstBar.SetThirst(currentThirst);
-        PlayerPrefs.SetFloat("save", currentThirst);
+        PlayerPrefs.SetInt("save2", currentThirst);
     }
 
     public void setFullHealth(){
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth);
-        PlayerPrefs.SetFloat("save2", currentHealth);
+        PlayerPrefs.SetInt("save", currentHealth);
     }
 
     public void setFullHunger(){
         currentHunger = maxHunger;
         HungerBar.SetHunger(currentHunger);
-        PlayerPrefs.SetFloat("save1", currentHunger);
+        PlayerPrefs.SetInt("save1", currentHunger);
     }
 
     public void setFullEnergy(){
         currentThirst = maxThirst;
         ThirstBar.SetThirst(currentThirst);
-        PlayerPrefs.SetFloat("save", currentThirst);
+        PlayerPrefs.SetInt("save2", currentThirst);
     }
 
     void Update()
@@ -133,17 +138,6 @@ public class TakeDamage : MonoBehaviour
         {
             Damage(5);
             timer = 0;
-            PlayerPrefs.SetFloat("save", currentThirst);
-            PlayerPrefs.SetFloat("save1", currentHunger);
-            PlayerPrefs.SetFloat("save2", currentHealth);
         }
-
-
-
     }
-
-  
-
-
-
 }

@@ -10,8 +10,18 @@ public class Player : MonoBehaviour
 
     public new Rigidbody2D rigidbody2D;
     public Animator animator;
-
+    public int health;
+    public int hunger;
+    public int energy;
+    public int coin;
     Vector2 movement;
+    public void PlayerD()
+    {
+        health = PlayerPrefs.GetInt("save");
+        hunger = PlayerPrefs.GetInt("save1");
+        energy = PlayerPrefs.GetInt("save2");
+        coin = PlayerPrefs.GetInt("money");
+    }
    
     // Update is called once per frame
     void Update()
@@ -22,6 +32,12 @@ public class Player : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        PlayerD();
+        Save();
+    }
+    public void Save()
+    {
+        SaveSystem.SavePlayer(this);
     }
 
     void FixedUpdate()

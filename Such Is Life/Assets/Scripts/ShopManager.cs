@@ -11,7 +11,8 @@ public class ShopManager : MonoBehaviour
 
     void Start()
     {
-        coinInt = PlayerPrefs.GetInt("money");
+        PlayerData playerData = SaveSystem.LoadPlayer();
+        coinInt = playerData.coin;
         coinText.text = coinInt.ToString();
     }
     public int TransformText ()
