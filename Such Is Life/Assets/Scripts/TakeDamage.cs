@@ -22,9 +22,6 @@ public class TakeDamage : MonoBehaviour
     void Start()
     {
         PlayerData playerData = SaveSystem.LoadPlayer();
-        currentHunger = maxHunger;
-        currentThirst = maxThirst;
-        currentHealth = maxHealth;
 
         currentThirst = playerData.energy;
         currentHunger = playerData.hunger;

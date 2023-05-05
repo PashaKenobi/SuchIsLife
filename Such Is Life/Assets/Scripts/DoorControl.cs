@@ -59,13 +59,23 @@ public class DoorControl : MonoBehaviour
             Scene = "Shop";
             enter = true;
         }
+        else if (door.GetComponent<Bank>())
+        {
+            Scene = "Bank";
+            enter = true;
+        }
+        else if (door.GetComponent<Hospital>())
+        {
+            Scene = "Hospital";
+            enter = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D door)
     {
         if(door.GetComponent<PcHouseDoor>() || door.GetComponent<wareHouseDoor>() || door.GetComponent<PcDoor>() ||
            door.GetComponent<wareDoor>() || door.GetComponent<RoadtoNPC>() || door.GetComponent<RoadtoNPC2>() || door.GetComponent<RoadtoNPC3>()
-           || door.GetComponent<RoadToShop>())
+           || door.GetComponent<RoadToShop>() || door.GetComponent<Bank>())
         {
             enter = false;
         }

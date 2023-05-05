@@ -78,6 +78,26 @@ public class Spawn : MonoBehaviour
             PlayerPrefs.SetFloat("y5", y);
             PlayerPrefs.SetFloat("z5", z);
         }
+        else if (SceneManager.GetActiveScene().name == "Bank")
+        {
+            x = this.transform.position.x;
+            y = this.transform.position.y;
+            z = this.transform.position.z;
+
+            PlayerPrefs.SetFloat("x6", x);
+            PlayerPrefs.SetFloat("y6", y);
+            PlayerPrefs.SetFloat("z6", z);
+        }
+        else if (SceneManager.GetActiveScene().name == "Hospital")
+        {
+            x = this.transform.position.x;
+            y = this.transform.position.y;
+            z = this.transform.position.z;
+
+            PlayerPrefs.SetFloat("x7", x);
+            PlayerPrefs.SetFloat("y7", y);
+            PlayerPrefs.SetFloat("z7", z);
+        }
 
 
     }
@@ -118,6 +138,18 @@ public class Spawn : MonoBehaviour
             x = PlayerPrefs.GetFloat("x5");
             y = PlayerPrefs.GetFloat("y5");
             z = PlayerPrefs.GetFloat("z5");
+        }
+        else if (SceneManager.GetActiveScene().name == "Bank")
+        {
+           x = PlayerPrefs.GetFloat("x6");
+           y = PlayerPrefs.GetFloat("y6");
+           z = PlayerPrefs.GetFloat("z6");
+        }
+        else if (SceneManager.GetActiveScene().name == "Hospital")
+        { 
+            x = PlayerPrefs.GetFloat("x7");
+            y = PlayerPrefs.GetFloat("y7");
+            z = PlayerPrefs.GetFloat("z7");
         }
         LoadPosition = new Vector3(x, y, z);
         this.transform.position = LoadPosition;
