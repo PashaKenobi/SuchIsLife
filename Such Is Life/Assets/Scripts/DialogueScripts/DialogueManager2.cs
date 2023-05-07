@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager2 : MonoBehaviour
 {
     public float delay;
     public TextMeshProUGUI nameText;
@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
     public Image speakerPortraitEmpty;
     public GameObject dialogueBox;
     public bool visibleOnInit;
+    public int destroyAfterRepetitions = 1;
+    private int repeatCount = 0;
 
     private Queue<string> sentences;
 
@@ -68,7 +70,11 @@ public class DialogueManager : MonoBehaviour
 
     //Ends the dialogue and renders the dialogue box invisible for the time being.
     public void EndDialogue(){
+        repeatCount++;
         setPanelVisibility(false);
+        if(destroyAfterRepetitions == repeatCount){
+            Destroy(this);
+        }
         Debug.Log("End of conversation.");
     }
 
