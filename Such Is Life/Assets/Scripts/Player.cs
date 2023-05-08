@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     public int energy;
     public int coin;
     Vector2 movement;
+    public bool goodEndingTracker;
+    public bool carriedFurniture;
+
     public void PlayerD()
     {
         health = PlayerPrefs.GetInt("save");
@@ -38,6 +41,22 @@ public class Player : MonoBehaviour
     public void Save()
     {
         SaveSystem.SavePlayer(this);
+    }
+
+    public bool GetEnding(){
+        return goodEndingTracker;
+    }
+
+    public void SetEnding(bool ending){
+        goodEndingTracker = ending;
+    }
+
+    public bool GetFurn(){
+        return carriedFurniture;
+    }
+
+    public void SetFurn(bool furn){
+        carriedFurniture = furn;
     }
 
     void FixedUpdate()

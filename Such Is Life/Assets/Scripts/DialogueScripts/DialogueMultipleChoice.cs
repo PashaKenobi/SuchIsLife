@@ -2,17 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DialogueMultipleChoice : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public Dialogue dialogue1;
+    public Dialogue dialogue2;
+    public Player player;
+    public bool endingFork;
+
+    private void Start(){
+        TriggerDialogue();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TriggerDialogue ()
     {
-        
+        if(endingFork){
+            
+          if(player.GetEnding()){
+              FindObjectOfType<DialogueManagerMulti>().StartDialogue(dialogue1);
+          }
+          else{
+              FindObjectOfType<DialogueManagerMulti>().StartDialogue(dialogue2);
+          }
+        }
+        else{
+
+          if(player.GetFurn()){
+              FindObjectOfType<DialogueManagerMulti>().StartDialogue(dialogue1);
+          }
+          else{
+              FindObjectOfType<DialogueManagerMulti>().StartDialogue(dialogue2);
+          }
+        }
     }
 }

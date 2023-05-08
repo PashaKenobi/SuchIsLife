@@ -29887,6 +29887,7 @@ MonoBehaviour:
   hunger: 0
   energy: 0
   coin: 0
+  goodEndingTracker: 0
 --- !u!50 &574134548
 Rigidbody2D:
   serializedVersion: 4

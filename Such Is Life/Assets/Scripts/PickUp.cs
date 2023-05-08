@@ -9,7 +9,8 @@ public class PickUp : MonoBehaviour
     public GameObject destroyEffect;
     public Vector3 Direction { get; set; }
     private GameObject itemHolding;
-  
+    public Player pickUpWorker;
+    private int pickUpCount = 0;
 
 
     void Update()
@@ -32,6 +33,10 @@ public class PickUp : MonoBehaviour
                     itemHolding = pickUpItem.gameObject;
                     itemHolding.transform.position = holdSpot.position;
                     itemHolding.transform.parent = transform;
+                    pickUpCount++;
+                    if(pickUpCount >= 5){
+                        pickUpWorker.SetFurn(true);
+                    }
                     if (itemHolding.GetComponent<Rigidbody2D>())
                         itemHolding.GetComponent<Rigidbody2D>().simulated = false;
                 }
