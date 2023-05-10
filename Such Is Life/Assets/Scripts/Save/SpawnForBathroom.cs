@@ -6,7 +6,7 @@ public class SpawnForBathroom : MonoBehaviour
 {
     public float x, y, z;
     public Vector3 LoadPosition;
-    bool first = true;
+    int first = 1;
     private void Start()
     {
         Load();
@@ -102,8 +102,8 @@ public class SpawnForBathroom : MonoBehaviour
 
     public void Load()
     {
-        first = PlayerPrefs.GetInt("foo1") == 1 ? true : false;
-        if (first == true )
+        first = PlayerPrefs.GetInt("foo1");
+        if (first == 1 || PlayerPrefs.GetInt("foo1").Equals(null))
         {
             if (gameObject.name.Equals("Mirror"))
             {
@@ -153,8 +153,8 @@ public class SpawnForBathroom : MonoBehaviour
                 y = this.transform.position.y;
                 z = this.transform.position.z;
             }
-            first = false;
-            PlayerPrefs.SetInt("foo1", first ? 1 : 0);
+            first = 0;
+            PlayerPrefs.SetInt("foo1", first);
         }
         else
         {

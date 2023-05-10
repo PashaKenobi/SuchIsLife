@@ -6,7 +6,7 @@ public class SaveForGym : MonoBehaviour
 {
     public float x, y, z;
     public Vector3 LoadPosition;
-    bool first = true;
+    int first = 1;
     private void Start()
     {
         Load();
@@ -82,8 +82,8 @@ public class SaveForGym : MonoBehaviour
 
     public void Load()
     {
-        first = PlayerPrefs.GetInt("foo2") == 1 ? true : false;
-        if (first == true )
+        first = PlayerPrefs.GetInt("foo2");
+        if (first == 1 || PlayerPrefs.GetInt("foo2").Equals(null))
         {
             if (gameObject.name.Equals("gym1"))
             {
@@ -121,8 +121,8 @@ public class SaveForGym : MonoBehaviour
                 y = this.transform.position.y;
                 z = this.transform.position.z;
             }
-            first = false;
-            PlayerPrefs.SetInt("foo2", first ? 1 : 0);
+            first = 0;
+            PlayerPrefs.SetInt("foo", first);
         }
         else
         {

@@ -90,6 +90,14 @@ public class Interactable : MonoBehaviour
         {
             PlayerPrefs.SetInt("Key9", keyCount);
         }
+        else if (SceneManager.GetActiveScene().name == "WUpRight")
+        {
+            PlayerPrefs.SetInt("Key10", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "Caravan")
+        {
+            PlayerPrefs.SetInt("Key11", keyCount);
+        }
     }
     public void Load()
     {
@@ -173,6 +181,24 @@ public class Interactable : MonoBehaviour
             }
             else
                 keyCount = PlayerPrefs.GetInt("Key9");
+        }
+        else if (SceneManager.GetActiveScene().name == "WUpRight")
+        {
+            if (PlayerPrefs.GetInt("Key10").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key10");
+        }
+        else if (SceneManager.GetActiveScene().name == "Caravan")
+        {
+            if (PlayerPrefs.GetInt("Key11").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key11");
         }
     }
     public void DummyEvent(){

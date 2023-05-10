@@ -6,7 +6,7 @@ public class SaveForMusic : MonoBehaviour
 {
     public float x, y, z;
     public Vector3 LoadPosition;
-    bool first = true;
+    int first = 1;
     private void Start()
     {
         Load();
@@ -83,8 +83,8 @@ public class SaveForMusic : MonoBehaviour
 
     public void Load()
     {
-        first = PlayerPrefs.GetInt("foo3") == 1 ? true : false;
-        if (first == true )
+        first = PlayerPrefs.GetInt("foo3");
+        if (first == 1 || PlayerPrefs.GetInt("foo3").Equals(null))
         {
             if (gameObject.name.Equals("Piano"))
             {
@@ -122,8 +122,8 @@ public class SaveForMusic : MonoBehaviour
                 y = this.transform.position.y;
                 z = this.transform.position.z;
             }
-            first = false;
-            PlayerPrefs.SetInt("foo3", first ? 1 : 0);
+            first = 0;
+            PlayerPrefs.SetInt("foo3",first);
         }
         else
         {

@@ -7,7 +7,7 @@ public class SpawnFurniture : MonoBehaviour
 {
     public float x, y, z;
     public Vector3 LoadPosition;
-    bool first = true;
+    int first = 1;
     private void Start()
     {
         Load();
@@ -154,8 +154,8 @@ public class SpawnFurniture : MonoBehaviour
 
     public void Load()
     {
-        first = PlayerPrefs.GetInt("foo") == 1 ? true : false;
-        if (first == true)
+        first = PlayerPrefs.GetInt("foo");
+        if (first == 1 || PlayerPrefs.GetInt("foo").Equals(null))
         {
             if (gameObject.name.Equals("Lava lamp1"))
             {
@@ -235,8 +235,8 @@ public class SpawnFurniture : MonoBehaviour
                 y = this.transform.position.y;
                 z = this.transform.position.z;
             }
-            first = false;
-            PlayerPrefs.SetInt("foo", first ? 1 : 0);
+            first = 0;
+            PlayerPrefs.SetInt("foo", first);
         }
         else
         {
