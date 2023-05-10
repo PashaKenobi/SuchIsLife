@@ -9,6 +9,7 @@ public class PlayerData {
     public int hunger;
     public int energy;
     public int coin;
+    public string scene;
 
     public PlayerData(Player player)
     {
@@ -16,5 +17,6 @@ public class PlayerData {
         hunger = player.hunger; 
         energy = player.energy; 
         coin = player.coin;
+        scene = player.scene;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour
     public int hunger;
     public int energy;
     public int coin;
+    public string scene;
     Vector2 movement;
     public bool goodEndingTracker;
     public bool carriedFurniture;
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
         hunger = PlayerPrefs.GetInt("save1");
         energy = PlayerPrefs.GetInt("save2");
         coin = PlayerPrefs.GetInt("money");
+        scene = SceneManager.GetActiveScene().name;
     }
    
     // Update is called once per frame

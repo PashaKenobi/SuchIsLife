@@ -765,6 +765,7 @@ GameObject:
   - component: {fileID: 114099294}
   - component: {fileID: 114099293}
   - component: {fileID: 114099292}
+  - component: {fileID: 114099295}
   m_Layer: 6
   m_Name: gym3
   m_TagString: Untagged
@@ -886,6 +887,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &114099295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114099290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84553e28505c4c94ab63f2f1aca7ee92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &130451076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,6 +1050,7 @@ GameObject:
   - component: {fileID: 177538331}
   - component: {fileID: 177538330}
   - component: {fileID: 177538329}
+  - component: {fileID: 177538332}
   m_Layer: 6
   m_Name: gym1
   m_TagString: Untagged
@@ -1154,6 +1172,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &177538332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177538327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84553e28505c4c94ab63f2f1aca7ee92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &181919082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,6 +2169,7 @@ GameObject:
   - component: {fileID: 329964338}
   - component: {fileID: 329964337}
   - component: {fileID: 329964336}
+  - component: {fileID: 329964339}
   m_Layer: 6
   m_Name: Piano
   m_TagString: Untagged
@@ -2256,6 +2291,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &329964339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329964334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f88a0497a2e7947837f294e7b5e588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &343124691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59161,6 +59212,7 @@ GameObject:
   - component: {fileID: 366848357}
   - component: {fileID: 366848356}
   - component: {fileID: 366848355}
+  - component: {fileID: 366848358}
   m_Layer: 6
   m_Name: Closet
   m_TagString: Untagged
@@ -59282,6 +59334,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &366848358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366848353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &421718381
 GameObject:
   m_ObjectHideFlags: 3
@@ -59667,6 +59735,7 @@ GameObject:
   - component: {fileID: 475992539}
   - component: {fileID: 475992538}
   - component: {fileID: 475992537}
+  - component: {fileID: 475992540}
   m_Layer: 6
   m_Name: Box2
   m_TagString: Untagged
@@ -59788,6 +59857,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &475992540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475992535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &478126388 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3781621353064503105, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
@@ -59811,6 +59896,7 @@ GameObject:
   - component: {fileID: 520278336}
   - component: {fileID: 520278335}
   - component: {fileID: 520278334}
+  - component: {fileID: 520278337}
   m_Layer: 6
   m_Name: Electro guitar
   m_TagString: Untagged
@@ -59932,6 +60018,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &520278337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520278332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f88a0497a2e7947837f294e7b5e588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &549379145
 GameObject:
   m_ObjectHideFlags: 0
@@ -60094,6 +60196,7 @@ GameObject:
   - component: {fileID: 578822823}
   - component: {fileID: 578822822}
   - component: {fileID: 578822821}
+  - component: {fileID: 578822824}
   m_Layer: 6
   m_Name: Bathtub
   m_TagString: Untagged
@@ -60215,6 +60318,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &578822824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578822819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &595918744 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
@@ -60238,8 +60357,9 @@ GameObject:
   - component: {fileID: 613475780}
   - component: {fileID: 613475779}
   - component: {fileID: 613475778}
+  - component: {fileID: 613475781}
   m_Layer: 6
-  m_Name: gym7
+  m_Name: gym6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60359,6 +60479,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &613475781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613475776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84553e28505c4c94ab63f2f1aca7ee92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &626023381
 GameObject:
   m_ObjectHideFlags: 0
@@ -60371,6 +60507,7 @@ GameObject:
   - component: {fileID: 626023385}
   - component: {fileID: 626023384}
   - component: {fileID: 626023383}
+  - component: {fileID: 626023386}
   m_Layer: 6
   m_Name: gym4
   m_TagString: Untagged
@@ -60492,6 +60629,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &626023386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626023381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84553e28505c4c94ab63f2f1aca7ee92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &630669088
 GameObject:
   m_ObjectHideFlags: 0
@@ -60785,6 +60938,7 @@ GameObject:
   - component: {fileID: 760168628}
   - component: {fileID: 760168627}
   - component: {fileID: 760168626}
+  - component: {fileID: 760168629}
   m_Layer: 6
   m_Name: gym5
   m_TagString: Untagged
@@ -60906,6 +61060,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &760168629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760168624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84553e28505c4c94ab63f2f1aca7ee92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &767326563
 GameObject:
   m_ObjectHideFlags: 0
@@ -61427,6 +61597,7 @@ GameObject:
   - component: {fileID: 917296952}
   - component: {fileID: 917296951}
   - component: {fileID: 917296950}
+  - component: {fileID: 917296953}
   m_Layer: 6
   m_Name: Speaker1
   m_TagString: Untagged
@@ -61548,6 +61719,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &917296953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917296948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f88a0497a2e7947837f294e7b5e588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &945213179
 GameObject:
   m_ObjectHideFlags: 0
@@ -67036,6 +67223,7 @@ GameObject:
   - component: {fileID: 1128093534}
   - component: {fileID: 1128093533}
   - component: {fileID: 1128093532}
+  - component: {fileID: 1128093535}
   m_Layer: 6
   m_Name: Batery
   m_TagString: Untagged
@@ -67157,6 +67345,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1128093535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128093530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f88a0497a2e7947837f294e7b5e588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1167639441
 GameObject:
   m_ObjectHideFlags: 0
@@ -67208,6 +67412,7 @@ GameObject:
   - component: {fileID: 1186287249}
   - component: {fileID: 1186287248}
   - component: {fileID: 1186287247}
+  - component: {fileID: 1186287250}
   m_Layer: 6
   m_Name: Wardrobe
   m_TagString: Untagged
@@ -67329,6 +67534,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1186287250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186287245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1189136573
 GameObject:
   m_ObjectHideFlags: 0
@@ -67822,6 +68043,7 @@ GameObject:
   - component: {fileID: 1369308036}
   - component: {fileID: 1369308035}
   - component: {fileID: 1369308034}
+  - component: {fileID: 1369308037}
   m_Layer: 6
   m_Name: Washer machine
   m_TagString: Untagged
@@ -67943,6 +68165,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1369308037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369308032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1373138683
 GameObject:
   m_ObjectHideFlags: 0
@@ -68776,6 +69014,7 @@ GameObject:
   - component: {fileID: 1508494045}
   - component: {fileID: 1508494044}
   - component: {fileID: 1508494043}
+  - component: {fileID: 1508494046}
   m_Layer: 6
   m_Name: Box
   m_TagString: Untagged
@@ -68897,6 +69136,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1508494046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508494041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1519048159
 GameObject:
   m_ObjectHideFlags: 0
@@ -68909,6 +69164,7 @@ GameObject:
   - component: {fileID: 1519048163}
   - component: {fileID: 1519048162}
   - component: {fileID: 1519048161}
+  - component: {fileID: 1519048164}
   m_Layer: 6
   m_Name: Mic
   m_TagString: Untagged
@@ -69030,6 +69286,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1519048164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519048159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f88a0497a2e7947837f294e7b5e588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1525554750
 GameObject:
   m_ObjectHideFlags: 0
@@ -69042,6 +69314,7 @@ GameObject:
   - component: {fileID: 1525554754}
   - component: {fileID: 1525554753}
   - component: {fileID: 1525554752}
+  - component: {fileID: 1525554755}
   m_Layer: 6
   m_Name: Coat rack
   m_TagString: Untagged
@@ -69163,6 +69436,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1525554755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525554750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1569227990
 GameObject:
   m_ObjectHideFlags: 0
@@ -69175,6 +69464,7 @@ GameObject:
   - component: {fileID: 1569227994}
   - component: {fileID: 1569227993}
   - component: {fileID: 1569227992}
+  - component: {fileID: 1569227995}
   m_Layer: 6
   m_Name: gym2
   m_TagString: Untagged
@@ -69296,6 +69586,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1569227995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569227990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84553e28505c4c94ab63f2f1aca7ee92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1578371418
 GameObject:
   m_ObjectHideFlags: 0
@@ -70510,6 +70816,7 @@ GameObject:
   - component: {fileID: 2023083560}
   - component: {fileID: 2023083559}
   - component: {fileID: 2023083558}
+  - component: {fileID: 2023083561}
   m_Layer: 6
   m_Name: Speaker2
   m_TagString: Untagged
@@ -70631,6 +70938,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2023083561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023083556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f88a0497a2e7947837f294e7b5e588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2024598518
 GameObject:
   m_ObjectHideFlags: 0
@@ -70793,6 +71116,7 @@ GameObject:
   - component: {fileID: 2074611815}
   - component: {fileID: 2074611814}
   - component: {fileID: 2074611813}
+  - component: {fileID: 2074611816}
   m_Layer: 6
   m_Name: Mirror
   m_TagString: Untagged
@@ -70914,6 +71238,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2074611816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074611811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b8100a4fe40964e9f7caccfbbb235e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  LoadPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2115725459
 GameObject:
   m_ObjectHideFlags: 0

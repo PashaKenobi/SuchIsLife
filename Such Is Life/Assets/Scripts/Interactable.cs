@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -26,11 +27,13 @@ public class Interactable : MonoBehaviour
         actions.Add(interactAction4);
         actions.Add(interactAction5);
         actions.Add(interactAction6);
+        Load();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (inRange)
         {
             if (!limitedInteraction && Input.GetKeyDown(interactKey))
@@ -40,6 +43,7 @@ public class Interactable : MonoBehaviour
             if (limitedInteraction && keyCount <= 5 && Input.GetKeyDown(interactKey)){
                 actions[keyCount].Invoke();
                 keyCount++;
+                Save();
             }
             if(limitedInteraction && keyCount > 5 && Input.GetKeyDown(interactKey)){
                 DummyEvent();
@@ -48,6 +52,116 @@ public class Interactable : MonoBehaviour
         
     }
 
+    public void Save()
+    {
+        if (SceneManager.GetActiveScene().name == "Map 3")
+        {
+            PlayerPrefs.SetInt("Key1", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "Map 2")
+        {
+            PlayerPrefs.SetInt("Key2", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "Map 1")
+        {
+            PlayerPrefs.SetInt("Key3", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "PCHouse")
+        {
+            PlayerPrefs.SetInt("Key4", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "Warehouse")
+        {
+            PlayerPrefs.SetInt("Key5", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "CaravanPark")
+        {
+            PlayerPrefs.SetInt("Key6", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "Bank")
+        {
+            PlayerPrefs.SetInt("Key7", keyCount);
+        }
+        else if (SceneManager.GetActiveScene().name == "Hospital")
+        {
+            PlayerPrefs.SetInt("Key8", keyCount);
+        }
+    }
+    public void Load()
+    {
+        if (SceneManager.GetActiveScene().name == "Map 3")
+        {
+            if (PlayerPrefs.GetInt("Key1").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+           keyCount = PlayerPrefs.GetInt("Key1");
+        }
+        else if (SceneManager.GetActiveScene().name == "Map 2")
+        {
+            if (PlayerPrefs.GetInt("Key2").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key2");
+        }
+        else if (SceneManager.GetActiveScene().name == "Map 1")
+        {
+            if (PlayerPrefs.GetInt("Key3").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key3");
+        }
+        else if (SceneManager.GetActiveScene().name == "PCHouse")
+        {
+            if (PlayerPrefs.GetInt("Key4").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key4");
+        }
+        else if (SceneManager.GetActiveScene().name == "Warehouse")
+        {
+            if (PlayerPrefs.GetInt("Key5").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key5");
+        }
+        else if (SceneManager.GetActiveScene().name == "CaravanPark")
+        {
+            if (PlayerPrefs.GetInt("Key6").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key6");
+        }
+        else if (SceneManager.GetActiveScene().name == "Bank")
+        {
+            if (PlayerPrefs.GetInt("Key7").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key7"); ;
+        }
+        else if (SceneManager.GetActiveScene().name == "Hospital")
+        {
+            if (PlayerPrefs.GetInt("Key8").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key8");
+        }
+    }
     public void DummyEvent(){
         Debug.Log("dummy event");
     }

@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-
+    PlayerData playerData;
     public void PlayGame()
     {
+        PlayerPrefs.SetInt("save", 100);
+        PlayerPrefs.SetInt("save1", 100);
+        PlayerPrefs.SetInt("save2", 100);
+        PlayerPrefs.SetInt("money", 100);
         SceneManager.LoadScene("Map 2");
     }
 
@@ -21,5 +25,14 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("How To Play");
     }
-   
+    public void Load()
+    {
+        playerData = SaveSystem.LoadPlayer();
+        if (playerData.scene == null ) {
+            SceneManager.LoadScene("Map 2");
+        }
+        else
+        SceneManager.LoadScene(playerData.scene);
+    }
+
 }
