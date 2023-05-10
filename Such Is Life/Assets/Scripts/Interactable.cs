@@ -86,6 +86,10 @@ public class Interactable : MonoBehaviour
         {
             PlayerPrefs.SetInt("Key8", keyCount);
         }
+        else if (SceneManager.GetActiveScene().name == "Shop")
+        {
+            PlayerPrefs.SetInt("Key9", keyCount);
+        }
     }
     public void Load()
     {
@@ -160,6 +164,15 @@ public class Interactable : MonoBehaviour
             }
             else
                 keyCount = PlayerPrefs.GetInt("Key8");
+        }
+        else if (SceneManager.GetActiveScene().name == "Shop")
+        {
+            if (PlayerPrefs.GetInt("Key9").Equals(null))
+            {
+                keyCount = 0;
+            }
+            else
+                keyCount = PlayerPrefs.GetInt("Key9");
         }
     }
     public void DummyEvent(){

@@ -15,6 +15,13 @@ public class InstructionText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (intToBool(PlayerPrefs.GetInt("once")).Equals(null))
+        {
+            alreadyShown = false;
+        }
+        else { 
+           alreadyShown = intToBool(PlayerPrefs.GetInt("once")); 
+        }
         textHolder.SetActive(true);
      if(oneTimeThing && alreadyShown){
         textHolder.SetActive(false);
@@ -26,7 +33,23 @@ public class InstructionText : MonoBehaviour
     {
         if(Input.GetKeyDown(disappearKey)){
             alreadyShown = true;
+            PlayerPrefs.SetInt("once", boolToInt(alreadyShown));
             textHolder.SetActive(false);
         }
+    }
+    int boolToInt(bool val)
+    {
+        if (val)
+            return 1;
+        else
+            return 0;
+    }
+
+    bool intToBool(int val)
+    {
+        if (val != 0)
+            return true;
+        else
+            return false;
     }
 }
