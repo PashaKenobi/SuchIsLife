@@ -955,7 +955,9 @@ MonoBehaviour:
   hunger: 0
   energy: 0
   coin: 0
+  scene: 
   goodEndingTracker: 0
+  carriedFurniture: 0
 --- !u!50 &159956314
 Rigidbody2D:
   serializedVersion: 4
@@ -1045,6 +1047,7 @@ MonoBehaviour:
   y: 0
   z: 0
   LoadPosition: {x: 0, y: 0, z: 0}
+  first: 1
 --- !u!114 &159956317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1543,6 +1546,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 664866539}
+    - target: {fileID: 2066252937743226100, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 877659438}
+    - target: {fileID: 2066252937743226100, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndDialogue
+      objectReference: {fileID: 0}
     - target: {fileID: 2316807938853027348, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1630,6 +1641,22 @@ PrefabInstance:
     - target: {fileID: 4665405719402506849, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816513369060053419, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 877659438}
+    - target: {fileID: 5816513369060053419, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981117000269263416, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981117000269263416, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
@@ -3992,56 +4019,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869153622}
   m_CullTransparentMesh: 1
---- !u!1 &877659436 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1497725994913746779, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+--- !u!114 &877659438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
   m_PrefabInstance: {fileID: 996924314}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &877659437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877659436}
-  m_Enabled: 1
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d122f167a13754c84cba2032ec8c63, type: 3}
+  m_Script: {fileID: 11500000, guid: f826019e49424674c8812edbf7ae87f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.05
-  nameText: {fileID: 645645637}
-  dialogueText: {fileID: 674719127}
-  speakerPortraitEmpty: {fileID: 2092020279}
-  dialogueBox: {fileID: 1002636676}
-  visibleOnInit: 0
-  destroyAfterRepetitions: 10
---- !u!114 &877659438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877659436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c31c840de1498047862ff0d723a7039, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue1:
-    speakerName: Tristan Rhodes
-    speakerPortrait: {fileID: 21300000, guid: 422e41d2357a2aa4abae231689c45a90, type: 3}
-    sentences:
-    - What kind of ending do I want?
-    - This is the good ending.
-    - That's all.
-  dialogue2:
-    speakerName: Tristan Rhodes
-    speakerPortrait: {fileID: 21300000, guid: 422e41d2357a2aa4abae231689c45a90, type: 3}
-    sentences:
-    - Well, that sucks.
-    - I got the bad ending.
-  player: {fileID: 159956313}
 --- !u!1 &901067825
 GameObject:
   m_ObjectHideFlags: 0
@@ -4367,12 +4355,110 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 645645637}
+    - target: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
-    - {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+    - target: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: decisionBox
+      value: 
+      objectReference: {fileID: 1002636676}
+    - target: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1002636676}
+    - target: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 674719127}
+    - target: {fileID: 7415583427826000711, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: speakerPortraitEmpty
+      value: 
+      objectReference: {fileID: 2092020279}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.speakerName
+      value: Tristan Rhodes
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.speakerPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 422e41d2357a2aa4abae231689c45a90, type: 3}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: man im doing good work lately
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: i got a legit job
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: helped a neighbour
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: maybe moving to bulwark wasnt such a bad idea
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: maybe new beginnings are possible
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: i never thought they would happen to me
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: but it seems that my fortune has returned
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[8]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[9]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[10]
+      value: wait...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[11]
+      value: what are these noises i'm hearing
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[12]
+      value: coming from that vertical parked caravan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[13]
+      value: intense keyboarding sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[14]
+      value: smell of overheated pc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[15]
+      value: someone must be cryptomining!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628853006082095215, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
+      propertyPath: dialogue.sentences.Array.data[16]
+      value: i gotta check this out!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f7fe0e1ed25e442ae7890f1d221d23, type: 3}
 --- !u!1 &1002636676 stripped
 GameObject:
@@ -25547,19 +25633,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction3.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction4.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -25592,11 +25678,11 @@ PrefabInstance:
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 877659438}
+      objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 877659437}
+      objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction3.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -25604,11 +25690,11 @@ PrefabInstance:
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction4.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 877659438}
+      objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction4.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 877659437}
+      objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -25639,7 +25725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerDialogue
+      value: setPanelVisible
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -25651,7 +25737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction4.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TriggerDialogue
+      value: setPanelVisible
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction4.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -25663,7 +25749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueMultipleChoice, Assembly-CSharp
+      value: DialogueManagerMulti, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -25675,7 +25761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction4.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DialogueMultipleChoice, Assembly-CSharp
+      value: DialogueManagerMulti, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction4.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

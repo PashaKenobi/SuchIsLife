@@ -13,8 +13,9 @@ public class DialogueManager : MonoBehaviour
     public Image speakerPortraitEmpty;
     public GameObject dialogueBox;
     public bool visibleOnInit;
-    public int destroyAfterRepetitions = 1;
     private int repeatCount = 0;
+    public bool leadsToDecision = false;
+    public GameObject decisionBox;
 
     private Queue<string> sentences;
 
@@ -72,8 +73,8 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue(){
         repeatCount++;
         setPanelVisibility(false);
-        if(destroyAfterRepetitions == repeatCount){
-            Destroy(this);
+        if(leadsToDecision){
+            decisionBox.SetActive(true);
         }
         Debug.Log("End of conversation.");
     }
@@ -82,7 +83,7 @@ public class DialogueManager : MonoBehaviour
     public void setPanelVisibility(bool panelStatus){
         if (dialogueBox != null) {
             dialogueBox.SetActive(panelStatus);  
-        }  
+        }
     }
 
     public void setPanelVisible(){

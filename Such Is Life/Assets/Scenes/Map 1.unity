@@ -492,7 +492,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5f3a9f16011ab67419206cfbd8424e90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1153,7 +1153,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 44fb31406543146498551c14ffdc8724, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1478,7 +1478,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b122c1f8851450147bb8b3993f5fc5fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24652,6 +24652,9 @@ MonoBehaviour:
   hunger: 0
   energy: 0
   coin: 0
+  scene: 
+  goodEndingTracker: 0
+  carriedFurniture: 0
 --- !u!50 &611726056
 Rigidbody2D:
   serializedVersion: 4
@@ -24791,6 +24794,7 @@ MonoBehaviour:
   y: 0
   z: 0
   LoadPosition: {x: 0, y: 0, z: 0}
+  first: 1
 --- !u!1 &673469516
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,10 @@ public class DialogueManagerMulti : MonoBehaviour
     public bool visibleOnInit;
     public int destroyAfterRepetitions = 10;
     private int repeatCount = 0;
+    public bool isEnding;    
+    public Player player;
+    public GameObject goodEndingPanel;
+    public GameObject badEndingPanel;
 
     private Queue<string> sentences;
 
@@ -75,6 +79,9 @@ public class DialogueManagerMulti : MonoBehaviour
         if(destroyAfterRepetitions == repeatCount){
             Destroy(this);
         }
+        if(isEnding){
+            presentEnding();
+        }
         Debug.Log("End of conversation.");
     }
 
@@ -88,4 +95,17 @@ public class DialogueManagerMulti : MonoBehaviour
     public void setPanelVisible(){
         dialogueBox.SetActive(true);
     }
+
+    public void presentEnding(){
+        if(player.GetEnding()){
+            goodEndingPanel.SetActive(true);
+            Destroy(player);
+        }
+        else{
+            badEndingPanel.SetActive(true);
+            Destroy(player);
+        }
+    }
+
+
 }

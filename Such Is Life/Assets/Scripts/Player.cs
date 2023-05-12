@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
 
     public void SetEnding(bool ending){
         goodEndingTracker = ending;
+        Save();
     }
 
     public bool GetFurn(){
@@ -60,6 +61,7 @@ public class Player : MonoBehaviour
 
     public void SetFurn(bool furn){
         carriedFurniture = furn;
+        Save();
     }
 
     void FixedUpdate()

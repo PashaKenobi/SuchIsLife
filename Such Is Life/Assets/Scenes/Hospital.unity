@@ -2200,6 +2200,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DisplayNextSentence
       objectReference: {fileID: 0}
+    - target: {fileID: 7981117000269263416, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
 --- !u!114 &504798735 stripped
@@ -3695,6 +3699,9 @@ MonoBehaviour:
   hunger: 0
   energy: 0
   coin: 0
+  scene: 
+  goodEndingTracker: 0
+  carriedFurniture: 0
 --- !u!50 &754076389
 Rigidbody2D:
   serializedVersion: 4
@@ -3784,6 +3791,7 @@ MonoBehaviour:
   y: 0
   z: 0
   LoadPosition: {x: 0, y: 0, z: 0}
+  first: 1
 --- !u!1 &755828996
 GameObject:
   m_ObjectHideFlags: 0
@@ -7880,11 +7888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction3.m_PersistentCalls.m_Calls.Array.size
@@ -7911,8 +7919,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
-      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -7947,9 +7959,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 504798735}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
-      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1342901358}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1697261840}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -7987,6 +8003,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -8015,8 +8035,12 @@ PrefabInstance:
       value: setPanelVisible
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
-      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: setPanelVisible
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -8051,8 +8075,12 @@ PrefabInstance:
       value: DialogueManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
-      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: DialogueManager2, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -8075,6 +8103,10 @@ PrefabInstance:
       value: Interactable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction2.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -8084,6 +8116,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
@@ -13241,9 +13277,9 @@ MonoBehaviour:
     speakerName: Tristan Rhodes
     speakerPortrait: {fileID: 21300000, guid: 422e41d2357a2aa4abae231689c45a90, type: 3}
     sentences:
-    - They told me to get a health report.
-    - What a bummer.
-    - Guess I'll do it.
+    - Hey, doc.
+    - I started working in the warehouse downtown.
+    - And they told me to get a health report.
 --- !u!114 &1342901358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25887,7 +25923,7 @@ RectTransform:
   - {fileID: 1508405247}
   - {fileID: 920081298}
   m_Father: {fileID: 280497793}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
