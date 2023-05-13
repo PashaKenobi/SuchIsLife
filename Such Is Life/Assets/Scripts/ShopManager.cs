@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour
 {
     public Text coinText;
     public int coinInt;
+    public GameObject insufficientFunds;
 
     void Start()
     {
@@ -48,12 +49,28 @@ public class ShopManager : MonoBehaviour
         coinInt = currentCoin+amount;
         coinText.text = coinInt.ToString();
         PlayerPrefs.SetInt("money", coinInt);
+        insufficientFunds.SetActive(false);
     }
     public void SubCoin(int amount)
     {
         int currentCoin = TransformText();
-        coinInt = currentCoin - amount;
-        coinText.text = coinInt.ToString();
-        PlayerPrefs.SetInt("money", coinInt);
+        if(currentCoin >= amount){
+            coinInt = currentCoin - amount;
+            coinText.text = coinInt.ToString();
+            PlayerPrefs.SetInt("money", coinInt);
+            insufficientFunds.SetActive(false);
+        }
+        else{
+            insufficientFunds.SetActive(true);
+        }
+    }
+    public void hideFundsMessage(){
+        insufficientFunds.SetActive(false);
+    }
+    public void showFundsMessage(){
+        insufficientFunds.SetActive(true);
+    }
+    public int getCoin(){
+        return coinInt;
     }
 }

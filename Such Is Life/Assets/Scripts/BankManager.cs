@@ -41,7 +41,13 @@ public class BankManager : MonoBehaviour
         int dep;
         bool intCheck = int.TryParse(deposit.text, out dep);
         if(intCheck){
-            AddBalance(dep);
+            if(pocketMoney.getCoin() < dep){
+                pocketMoney.showFundsMessage();
+            }
+            else{
+                pocketMoney.hideFundsMessage();
+                AddBalance(dep);
+            }
         }
     }
 
@@ -49,17 +55,26 @@ public class BankManager : MonoBehaviour
         int draw;
         bool intCheck = int.TryParse(withdrawal.text, out draw);
         if(intCheck){
-            SubBalance(draw);
+            if(draw > balance){
+                pocketMoney.showFundsMessage();
+            }
+            else{
+                pocketMoney.hideFundsMessage();
+                SubBalance(draw);
+            }
         }
     }
 
     public void AddBalance(int amount)
     {
         int currentBalance = balance;
-        balance = currentBalance + amount;
-        balanceText.text = balance.ToString();
-        PlayerPrefs.SetInt("balance", balance);
-        pocketMoney.SubCoin(amount);
+        if(pocketMoney.getCoin() >= amount){
+                pocketMoney.showFundsMessage();
+                balance = currentBalance + amount;
+                balanceText.text = balance.ToString();
+                PlayerPrefs.SetInt("balance", balance);
+                pocketMoney.SubCoin(amount);
+            }
     }
 
     public void SubBalance(int amount)
