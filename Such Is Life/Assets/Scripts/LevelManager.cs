@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     public void GameOver()
     {
-    
+
         UIMang _ui = GetComponent<UIMang>();
         if(_ui != null)
         {
