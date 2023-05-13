@@ -9,4 +9,14 @@ public class HowToPlayMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void goNextPage()
+    {
+        SceneManager.LoadScene("Htp 2");
+    }
+
+    public void goNextPage2()
+    {
+        SceneManager.LoadScene("Htp 3");
+    }
 }

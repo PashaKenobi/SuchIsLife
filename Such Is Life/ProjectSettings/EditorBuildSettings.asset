@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bank.unity
     guid: 779758d1c771e6c4ea318796575dce8f
+  - enabled: 1
+    path: Assets/Scenes/Htp 2.unity
+    guid: 45a5d7d657b9c2246884306c698f333f
+  - enabled: 1
+    path: Assets/Scenes/Htp 3.unity
+    guid: 739bf5f9ebca09d40989bb7993a957de
   m_configObjects: {}
