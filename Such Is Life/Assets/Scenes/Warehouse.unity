@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -478,6 +478,10 @@ PrefabInstance:
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -491,6 +495,10 @@ PrefabInstance:
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1202930927}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1815315906}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -508,8 +516,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DoWorkshift
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: AddCoin
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -528,11 +544,23 @@ PrefabInstance:
       value: WorkControl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ShopManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
       propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024486241628042772, guid: ec48683f2c0ad5d4c80d1ddec05151c0, type: 3}
+      propertyPath: interactAction1.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -21333,6 +21361,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737570602}
   m_CullTransparentMesh: 1
+--- !u!114 &1742988916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3428334392251695796, guid: a4399b374b6bf8e41bef24aee37fff7a, type: 3}
+  m_PrefabInstance: {fileID: 1008169293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1778308588
 GameObject:
   m_ObjectHideFlags: 0
@@ -21558,6 +21597,7 @@ GameObject:
   - component: {fileID: 1815315903}
   - component: {fileID: 1815315904}
   - component: {fileID: 1815315905}
+  - component: {fileID: 1815315906}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -21855,6 +21895,7 @@ MonoBehaviour:
   healthBar: {fileID: 1323221823}
   ThirstBar: {fileID: 1231383958}
   HungerBar: {fileID: 1202632636}
+  shopmanager: {fileID: 0}
 --- !u!114 &1815315905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21872,6 +21913,21 @@ MonoBehaviour:
   z: 0
   LoadPosition: {x: 0, y: 0, z: 0}
   first: 1
+--- !u!114 &1815315906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815315894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f790e38c6cbe0944289b27d29f98a11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 1742988916}
+  coinInt: 0
+  insufficientFunds: {fileID: 0}
 --- !u!1 &1824927742
 GameObject:
   m_ObjectHideFlags: 0
