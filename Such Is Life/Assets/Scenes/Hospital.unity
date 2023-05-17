@@ -2243,12 +2243,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 754076380}
         m_TargetAssemblyTypeName: TakeDamage, Assembly-CSharp
-        m_MethodName: setFullEnergy
-        m_Mode: 1
+        m_MethodName: FullEnergyWithMoney
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
+          m_IntArgument: 500
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2444,11 +2444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3481872071100933208, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 735.01
+      value: 732
       objectReference: {fileID: 0}
     - target: {fileID: 3481872071100933208, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 178.06
+      value: 182
       objectReference: {fileID: 0}
     - target: {fileID: 3889139105276705084, guid: 407f6fc16606dff468bdb3b1c59b61ed, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3473,12 +3473,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 754076380}
         m_TargetAssemblyTypeName: TakeDamage, Assembly-CSharp
-        m_MethodName: setFullHealth
-        m_Mode: 1
+        m_MethodName: FullHealthWithMoney
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
+          m_IntArgument: 750
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4009,6 +4009,7 @@ MonoBehaviour:
   healthBar: {fileID: 1269090535}
   ThirstBar: {fileID: 785565079}
   HungerBar: {fileID: 789302556}
+  shopmanager: {fileID: 754076381}
 --- !u!114 &754076381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4445,12 +4446,12 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 754076380}
         m_TargetAssemblyTypeName: TakeDamage, Assembly-CSharp
-        m_MethodName: setFullHunger
-        m_Mode: 1
+        m_MethodName: FullHungerWithMoney
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
+          m_IntArgument: 500
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

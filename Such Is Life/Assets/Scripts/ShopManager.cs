@@ -73,4 +73,10 @@ public class ShopManager : MonoBehaviour
     public int getCoin(){
         return coinInt;
     }
+
+    public bool enoughMoneyCheck(int amount)
+    {
+        int currentCoin = TransformText();
+        return currentCoin >= amount;
+    }
 }

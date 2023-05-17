@@ -16,8 +16,7 @@ public class TakeDamage : MonoBehaviour
     public HealthSc healthBar;
     public ThirstSc ThirstBar;
     public HungerSc HungerBar;
-
-    
+    public ShopManager shopmanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -125,6 +124,53 @@ public class TakeDamage : MonoBehaviour
         currentThirst = maxThirst;
         ThirstBar.SetThirst(currentThirst);
         PlayerPrefs.SetInt("save2", currentThirst);
+    }
+
+    public void FullHealthWithMoney(int price)
+    {
+        if (shopmanager.enoughMoneyCheck(price))
+        {
+            setFullHealth();
+        }
+    }
+    public void FullHungerWithMoney(int price)
+    {
+        if (shopmanager.enoughMoneyCheck(price))
+        {
+            setFullHunger();
+        }
+    }
+    public void FullEnergyWithMoney(int price)
+    {
+        if (shopmanager.enoughMoneyCheck(price))
+        {
+            setFullEnergy();
+        }
+    }
+
+
+    public void AddHealthWithMoney(int price, int amount)
+    {
+        if (shopmanager.enoughMoneyCheck(price))
+        {
+            addHealth(amount);
+        }
+    }
+    public void AddHungerWithMoney(int price, int amount)
+    {
+        if (shopmanager.enoughMoneyCheck(price))
+        {
+            addHunger(amount);
+        }
+    }
+
+    public void AddEnergyWithMoney(int price, int amount)
+    {
+        if (shopmanager.enoughMoneyCheck(price))
+        {
+            addEnergy(amount);
+
+        }
     }
 
     void Update()
