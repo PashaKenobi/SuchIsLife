@@ -33,9 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Caravan.unity
     guid: d2821405ae8340b42b8154e50d62051c
   - enabled: 1
-    path: Assets/Scenes/WDownRight.unity
-    guid: 9500bdfb46369e34585f3dfa6e9b0649
-  - enabled: 1
     path: Assets/Scenes/WUpRight.unity
     guid: ca0d87ec9779f574692e4b4bcdc7452f
   - enabled: 1

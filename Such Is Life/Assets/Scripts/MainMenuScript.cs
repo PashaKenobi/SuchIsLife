@@ -8,14 +8,16 @@ public class MainMenuScript : MonoBehaviour
     PlayerData playerData;
     public void PlayGame()
     {
+        PlayerPrefs.DeleteAll();
         PlayerPrefs.SetInt("save", 100);
         PlayerPrefs.SetInt("save1", 100);
         PlayerPrefs.SetInt("save2", 100);
         PlayerPrefs.SetInt("money", 100);
         PlayerPrefs.SetFloat("Seconds", 0);
         PlayerPrefs.SetInt("Mins", 0);
-        PlayerPrefs.SetInt("Hours", 0);
-        PlayerPrefs.SetInt("Days", 0);
+        PlayerPrefs.SetInt("Hours", 12);
+        PlayerPrefs.SetInt("Days", 1);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Map 2");
     }
 

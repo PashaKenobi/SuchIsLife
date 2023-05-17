@@ -106,7 +106,7 @@ public class Spawn : MonoBehaviour
     public void Load()
     {
         first = PlayerPrefs.GetInt("last");
-        if (first == 1 || first == null)
+        if (first == 1 || first.Equals(null))
         {
             if (SceneManager.GetActiveScene().name == "Map 3")
             {

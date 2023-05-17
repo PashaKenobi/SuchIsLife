@@ -131,9 +131,9 @@ public class TakeDamage : MonoBehaviour
     {
         timer += Time.deltaTime;
         
-        if(timer > 25)
+        if(timer > 30)
         {
-            Damage(10);
+            Damage(5);
             timer = 0;
         }
     }
