@@ -47,21 +47,53 @@ public class Player : MonoBehaviour
     }
 
     public bool GetEnding(){
+        if (PlayerPrefs.GetInt("Ending").Equals(1))
+        {
+            goodEndingTracker = true;
+        }
+        else
+        {
+            goodEndingTracker = false;
+        }
         return goodEndingTracker;
     }
 
     public void SetEnding(bool ending){
         goodEndingTracker = ending;
-        Save();
+        if (ending == true)
+        {
+            PlayerPrefs.SetInt("Ending", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Ending", 0);
+        }
+        
     }
 
     public bool GetFurn(){
+        if (PlayerPrefs.GetInt("carried").Equals(1))
+        {
+            carriedFurniture = true;
+        }
+        else
+        {
+            carriedFurniture = false;
+        }
         return carriedFurniture;
     }
 
     public void SetFurn(bool furn){
         carriedFurniture = furn;
-        Save();
+        if (furn == true)
+        {
+            PlayerPrefs.SetInt("carried", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("carried", 0);
+        }
+
     }
 
     void FixedUpdate()
